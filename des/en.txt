@@ -1,0 +1,15 @@
+Threads Video Downloader
+
+Download videos and images from Threads. Batch download and ZIP packaging support.
+
+Main Features:
+- Batch download videos and images
+- ZIP packaging support
+- Multi-language support
+- Privacy friendly, local processing with no data uploaded
+
+Key Features:
+- One-click download
+- Completely free
+- Open source
+- No ads
