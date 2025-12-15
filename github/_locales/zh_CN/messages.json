@@ -1,0 +1,306 @@
+{
+  "extName": {
+    "message": "Threads 视频下载器",
+    "description": "Extension name"
+  },
+  "extDescription": {
+    "message": "轻松下载 Threads 视频和图片，支持批量下载和 ZIP 打包。",
+    "description": "扩展程序说明"
+  },
+  "downloadVideo": {
+    "message": "下载视频",
+    "description": "Tooltip for video download button"
+  },
+  "downloadImage": {
+    "message": "下载图片",
+    "description": "Tooltip for image download button"
+  },
+  "downloading": {
+    "message": "下载中...",
+    "description": "Status when download is in progress"
+  },
+  "downloadStarted": {
+    "message": "开始下载: $FILENAME$",
+    "description": "Notification when download starts",
+    "placeholders": {
+      "filename": {
+        "content": "$1",
+        "example": "video.mp4"
+      }
+    }
+  },
+  "downloadFailed": {
+    "message": "下载失败: $FILENAME$",
+    "description": "Notification when download fails",
+    "placeholders": {
+      "filename": {
+        "content": "$1",
+        "example": "video.mp4"
+      }
+    }
+  },
+  "noMedia": {
+    "message": "此帖子无媒体",
+    "description": "Message when post has no media"
+  },
+  "tabAll": {
+    "message": "全部 ($COUNT$)",
+    "description": "Tab label for all media",
+    "placeholders": {
+      "count": {
+        "content": "$1",
+        "example": "5"
+      }
+    }
+  },
+  "tabVideos": {
+    "message": "视频 ($COUNT$)",
+    "description": "Tab label for videos",
+    "placeholders": {
+      "count": {
+        "content": "$1",
+        "example": "3"
+      }
+    }
+  },
+  "tabImages": {
+    "message": "图片 ($COUNT$)",
+    "description": "Tab label for images",
+    "placeholders": {
+      "count": {
+        "content": "$1",
+        "example": "2"
+      }
+    }
+  },
+  "downloadAll": {
+    "message": "全部下载 ($COUNT$ 个文件)",
+    "description": "Button to download all media as ZIP",
+    "placeholders": {
+      "count": {
+        "content": "$1",
+        "example": "5"
+      }
+    }
+  },
+  "packaging": {
+    "message": "打包中...",
+    "description": "Status when creating ZIP"
+  },
+  "completed": {
+    "message": "完成! ($DONE$/$TOTAL$)",
+    "description": "Status when download completed",
+    "placeholders": {
+      "done": {
+        "content": "$1",
+        "example": "3"
+      },
+      "total": {
+        "content": "$2",
+        "example": "5"
+      }
+    }
+  },
+  "failed": {
+    "message": "失败",
+    "description": "Status when download failed"
+  },
+  "noVideos": {
+    "message": "无视频",
+    "description": "Message when no videos found"
+  },
+  "noImages": {
+    "message": "无图片",
+    "description": "Message when no images found"
+  },
+  "video": {
+    "message": "视频",
+    "description": "Video label"
+  },
+  "image": {
+    "message": "图片",
+    "description": "Image label"
+  },
+  "popupScanning": {
+    "message": "扫描中...",
+    "description": "Popup scanning status"
+  },
+  "popupNoVideo": {
+    "message": "未检测到视频，请播放视频或滚动页面",
+    "description": "Popup no video message"
+  },
+  "popupDetected": {
+    "message": "已检测到 $COUNT$ 个视频",
+    "description": "Popup detected videos message",
+    "placeholders": {
+      "count": {
+        "content": "$1",
+        "example": "3"
+      }
+    }
+  },
+  "popupDownloadAll": {
+    "message": "下载全部",
+    "description": "Popup download all button"
+  },
+  "popupClear": {
+    "message": "清除列表",
+    "description": "Popup clear list button"
+  },
+  "popupMediaCount": {
+    "message": "检测到 $COUNT$ 个媒体文件",
+    "description": "Popup media count",
+    "placeholders": {
+      "count": {
+        "content": "$1",
+        "example": "5"
+      }
+    }
+  },
+  "popupRefresh": {
+    "message": "重新扫描",
+    "description": "Popup refresh button tooltip"
+  },
+  "popupCopyLink": {
+    "message": "复制链接",
+    "description": "Copy link button tooltip"
+  },
+  "popupEmptyHint": {
+    "message": "暂无视频项目。提示：请在 Threads 上播放视频",
+    "description": "Empty state hint"
+  },
+  "zipDownloaded": {
+    "message": "已下载 $COUNT$ 个文件: $FILENAME$",
+    "description": "ZIP download complete notification",
+    "placeholders": {
+      "count": {
+        "content": "$1",
+        "example": "5"
+      },
+      "filename": {
+        "content": "$2",
+        "example": "media.zip"
+      }
+    }
+  },
+  "zipFailed": {
+    "message": "打包下载失败: $ERROR$",
+    "description": "ZIP download failed notification",
+    "placeholders": {
+      "error": {
+        "content": "$1",
+        "example": "Network error"
+      }
+    }
+  },
+  "downloadProgress": {
+    "message": "下载中... $DONE$/$TOTAL$",
+    "description": "Download progress status",
+    "placeholders": {
+      "done": {
+        "content": "$1",
+        "example": "3"
+      },
+      "total": {
+        "content": "$2",
+        "example": "5"
+      }
+    }
+  },
+  "jsZipNotLoaded": {
+    "message": "JSZip 未加载，无法打包下载",
+    "description": "Error when JSZip is not available"
+  },
+  "allFilesFailed": {
+    "message": "所有文件下载失败",
+    "description": "Error when all files fail"
+  },
+  "settingsTitle": {
+    "message": "功能设置",
+    "description": "Settings section title"
+  },
+  "enableMediaMenu": {
+    "message": "媒体下载菜单",
+    "description": "Toggle for media download menu"
+  },
+  "enableSingleDownload": {
+    "message": "单一媒体下载",
+    "description": "Toggle for single media download"
+  },
+  "enableDebugMode": {
+    "message": "开发者模式 (Debug)",
+    "description": "Toggle for debug mode"
+  },
+  "developer": {
+    "message": "开发者",
+    "description": "Developer label"
+  },
+  "language": {
+    "message": "语言",
+    "description": "Language label"
+  },
+  "languageAuto": {
+    "message": "自动 (浏览器语言)",
+    "description": "Auto language option"
+  },
+  "reportIssue": {
+    "message": "问题回报",
+    "description": "Report issue link"
+  },
+  "enableFilenamePrefix": {
+    "message": "文件名称添加 threads 前缀",
+    "description": "Toggle for adding threads prefix to filename"
+  },
+  "modalTitle": {
+    "message": "Threads 视频下载器",
+    "description": "Modal window title"
+  },
+  "modalVersion": {
+    "message": "版本",
+    "description": "Version label in modal"
+  },
+  "modalFeatures": {
+    "message": "主要功能",
+    "description": "Features section title"
+  },
+  "modalFeature1": {
+    "message": "批量下载媒体",
+    "description": "Feature 1"
+  },
+  "modalFeature2": {
+    "message": "支持打包为 ZIP",
+    "description": "Feature 2"
+  },
+  "modalFeature3": {
+    "message": "多语言支持",
+    "description": "Feature 3"
+  },
+  "modalFeature4": {
+    "message": "隐私友好",
+    "description": "Feature 4"
+  },
+  "modalDisclaimer": {
+    "message": "完全免费使用。所有处理都在您的设备上完成，没有数据上传到服务器。此应用程序不包含任何广告，非营利性。",
+    "description": "隐私免责声明"
+  },
+  "modalDeveloper": {
+    "message": "开发者",
+    "description": "Developer label"
+  },
+  "modalContact": {
+    "message": "联络",
+    "description": "Contact label"
+  },
+  "modalGitHub": {
+    "message": "GitHub",
+    "description": "GitHub label"
+  },
+  "modalGitHubRepo": {
+    "message": "Threads-Downloader-Chrome",
+    "description": "GitHub repository name"
+  },
+  "modalGitHubStar": {
+    "message": "⭐ 请给一个星星",
+    "description": "Star request text"
+  }
+}

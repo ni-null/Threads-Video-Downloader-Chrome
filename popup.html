@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title data-i18n="extName">Threads Video Downloader</title>
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <div class="header-title">
+          <img src="logo/tr.svg" alt="Threads" class="header-icon" />
+          <h1>Threads Downloader</h1>
+        </div>
+      </div>
+
+      <!-- 設定區塊 -->
+      <div class="settings-section">
+        <div class="setting-item">
+          <label for="languageSelect" data-i18n="language">語言</label>
+          <select id="languageSelect" class="language-select">
+            <option value="auto" data-i18n="languageAuto">自動 (瀏覽器語言)</option>
+            <option value="en">English</option>
+            <option value="zh_TW">繁體中文</option>
+            <option value="zh_CN">简体中文</option>
+            <option value="ja">日本語</option>
+            <option value="ko">한국어</option>
+          </select>
+        </div>
+        <div class="setting-item">
+          <label for="enableMediaMenu" data-i18n="enableMediaMenu">媒體下載選單</label>
+          <label class="toggle-switch">
+            <input type="checkbox" id="enableMediaMenu" checked />
+            <span class="toggle-slider"></span>
+          </label>
+        </div>
+        <div class="setting-item">
+          <label for="enableSingleDownload" data-i18n="enableSingleDownload">單一媒體下載</label>
+          <label class="toggle-switch">
+            <input type="checkbox" id="enableSingleDownload" checked />
+            <span class="toggle-slider"></span>
+          </label>
+        </div>
+        <div class="setting-item">
+          <label for="enableFilenamePrefix" data-i18n="enableFilenamePrefix">檔案名稱添加 threads 前綴</label>
+          <label class="toggle-switch">
+            <input type="checkbox" id="enableFilenamePrefix" checked />
+            <span class="toggle-slider"></span>
+          </label>
+        </div>
+      </div>
+
+      <!-- 頁尾資訊 -->
+      <div class="footer-info">
+        <div class="version-info">
+          <span class="version">v1.0.0</span>
+          <span class="divider">|</span>
+          <span class="developer"><span data-i18n="developer">開發者</span>: <a href="https://github.com/ninull" target="_blank">ninull</a></span>
+        </div>
+        <div class="footer-actions">
+          <label class="debug-toggle" title="Developer Mode">
+            <input type="checkbox" id="enableDebugMode" />
+            <span class="debug-icon">🐛</span>
+          </label>
+          <a href="https://github.com/ni-null/Threads-Downloader-Chrome/issues" target="_blank" data-i18n="reportIssue" class="report-link"
+            >🐛 問題回報</a
+          >
+        </div>
+      </div>
+    </div>
+
+    <script src="popup.js"></script>
+  </body>
+</html>

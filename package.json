@@ -1,0 +1,26 @@
+{
+  "name": "Threads-Downloader",
+  "version": "1.0.0",
+  "description": "Chrome extension for downloading videos and images from Threads",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node scripts/build.js",
+    "clean": "node scripts/clean.js",
+    "dev": "echo 'Development mode: Load unpacked extension from root directory'"
+  },
+  "devDependencies": {
+    "esbuild": "^0.19.0",
+    "archiver": "^6.0.0"
+  },
+  "keywords": [
+    "chrome-extension",
+    "threads",
+    "video-downloader"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "sharp": "^0.34.5"
+  }
+}

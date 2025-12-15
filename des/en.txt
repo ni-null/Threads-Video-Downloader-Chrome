@@ -1,0 +1,13 @@
+This extension allows you to download videos, images, and carousels directly from posts, supporting batch downloads and ZIP packaging.
+
+Features:
+- Batch download videos and images
+- Support ZIP packaging
+- Multi-language support
+- Privacy-friendly, all processing is local and no data is uploaded
+- All processing is done locally for enhanced security
+
+
+How it works
+- When you hover over media, a save button appears at the bottom left
+- Adds a download menu to all posts containing media

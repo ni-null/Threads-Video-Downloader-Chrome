@@ -1,0 +1,306 @@
+{
+  "extName": {
+    "message": "Threads 비디오 다운로더",
+    "description": "Extension name"
+  },
+  "extDescription": {
+    "message": "Threads에서 비디오와 이미지를 쉽게 다운로드하세요. 일괄 다운로드와 ZIP 패키징을 지원합니다.",
+    "description": "확장 프로그램 설명"
+  },
+  "downloadVideo": {
+    "message": "비디오 다운로드",
+    "description": "Tooltip for video download button"
+  },
+  "downloadImage": {
+    "message": "이미지 다운로드",
+    "description": "Tooltip for image download button"
+  },
+  "downloading": {
+    "message": "다운로드 중...",
+    "description": "Status when download is in progress"
+  },
+  "downloadStarted": {
+    "message": "다운로드 시작: $FILENAME$",
+    "description": "Notification when download starts",
+    "placeholders": {
+      "filename": {
+        "content": "$1",
+        "example": "video.mp4"
+      }
+    }
+  },
+  "downloadFailed": {
+    "message": "다운로드 실패: $FILENAME$",
+    "description": "Notification when download fails",
+    "placeholders": {
+      "filename": {
+        "content": "$1",
+        "example": "video.mp4"
+      }
+    }
+  },
+  "noMedia": {
+    "message": "이 게시물에 미디어가 없습니다",
+    "description": "Message when post has no media"
+  },
+  "tabAll": {
+    "message": "전체 ($COUNT$)",
+    "description": "Tab label for all media",
+    "placeholders": {
+      "count": {
+        "content": "$1",
+        "example": "5"
+      }
+    }
+  },
+  "tabVideos": {
+    "message": "비디오 ($COUNT$)",
+    "description": "Tab label for videos",
+    "placeholders": {
+      "count": {
+        "content": "$1",
+        "example": "3"
+      }
+    }
+  },
+  "tabImages": {
+    "message": "이미지 ($COUNT$)",
+    "description": "Tab label for images",
+    "placeholders": {
+      "count": {
+        "content": "$1",
+        "example": "2"
+      }
+    }
+  },
+  "downloadAll": {
+    "message": "모두 다운로드 ($COUNT$ 파일)",
+    "description": "Button to download all media as ZIP",
+    "placeholders": {
+      "count": {
+        "content": "$1",
+        "example": "5"
+      }
+    }
+  },
+  "packaging": {
+    "message": "패키징 중...",
+    "description": "Status when creating ZIP"
+  },
+  "completed": {
+    "message": "완료! ($DONE$/$TOTAL$)",
+    "description": "Status when download completed",
+    "placeholders": {
+      "done": {
+        "content": "$1",
+        "example": "3"
+      },
+      "total": {
+        "content": "$2",
+        "example": "5"
+      }
+    }
+  },
+  "failed": {
+    "message": "실패",
+    "description": "Status when download failed"
+  },
+  "noVideos": {
+    "message": "비디오 없음",
+    "description": "Message when no videos found"
+  },
+  "noImages": {
+    "message": "이미지 없음",
+    "description": "Message when no images found"
+  },
+  "video": {
+    "message": "비디오",
+    "description": "Video label"
+  },
+  "image": {
+    "message": "이미지",
+    "description": "Image label"
+  },
+  "popupScanning": {
+    "message": "스캔 중...",
+    "description": "Popup scanning status"
+  },
+  "popupNoVideo": {
+    "message": "비디오가 감지되지 않았습니다. 비디오를 재생하거나 페이지를 스크롤하세요.",
+    "description": "Popup no video message"
+  },
+  "popupDetected": {
+    "message": "$COUNT$개의 비디오 감지됨",
+    "description": "Popup detected videos message",
+    "placeholders": {
+      "count": {
+        "content": "$1",
+        "example": "3"
+      }
+    }
+  },
+  "popupDownloadAll": {
+    "message": "모두 다운로드",
+    "description": "Popup download all button"
+  },
+  "popupClear": {
+    "message": "목록 지우기",
+    "description": "Popup clear list button"
+  },
+  "popupMediaCount": {
+    "message": "$COUNT$개의 미디어 파일 감지됨",
+    "description": "Popup media count",
+    "placeholders": {
+      "count": {
+        "content": "$1",
+        "example": "5"
+      }
+    }
+  },
+  "popupRefresh": {
+    "message": "다시 스캔",
+    "description": "Popup refresh button tooltip"
+  },
+  "popupCopyLink": {
+    "message": "링크 복사",
+    "description": "Copy link button tooltip"
+  },
+  "popupEmptyHint": {
+    "message": "비디오가 없습니다. 팁: Threads에서 비디오를 재생하세요.",
+    "description": "Empty state hint"
+  },
+  "zipDownloaded": {
+    "message": "$COUNT$개 파일 다운로드됨: $FILENAME$",
+    "description": "ZIP download complete notification",
+    "placeholders": {
+      "count": {
+        "content": "$1",
+        "example": "5"
+      },
+      "filename": {
+        "content": "$2",
+        "example": "media.zip"
+      }
+    }
+  },
+  "zipFailed": {
+    "message": "ZIP 다운로드 실패: $ERROR$",
+    "description": "ZIP download failed notification",
+    "placeholders": {
+      "error": {
+        "content": "$1",
+        "example": "Network error"
+      }
+    }
+  },
+  "downloadProgress": {
+    "message": "다운로드 중... $DONE$/$TOTAL$",
+    "description": "Download progress status",
+    "placeholders": {
+      "done": {
+        "content": "$1",
+        "example": "3"
+      },
+      "total": {
+        "content": "$2",
+        "example": "5"
+      }
+    }
+  },
+  "jsZipNotLoaded": {
+    "message": "JSZip이 로드되지 않았습니다. ZIP 패키지를 다운로드할 수 없습니다",
+    "description": "Error when JSZip is not available"
+  },
+  "allFilesFailed": {
+    "message": "모든 파일 다운로드 실패",
+    "description": "Error when all files fail"
+  },
+  "settingsTitle": {
+    "message": "기능 설정",
+    "description": "Settings section title"
+  },
+  "enableMediaMenu": {
+    "message": "미디어 다운로드 메뉴",
+    "description": "Toggle for media download menu"
+  },
+  "enableSingleDownload": {
+    "message": "단일 미디어 다운로드",
+    "description": "Toggle for single media download"
+  },
+  "enableDebugMode": {
+    "message": "개발자 모드 (Debug)",
+    "description": "Toggle for debug mode"
+  },
+  "developer": {
+    "message": "개발자",
+    "description": "Developer label"
+  },
+  "language": {
+    "message": "언어",
+    "description": "Language label"
+  },
+  "languageAuto": {
+    "message": "자동 (브라우저 언어)",
+    "description": "Auto language option"
+  },
+  "reportIssue": {
+    "message": "문제 보고",
+    "description": "Report issue link"
+  },
+  "enableFilenamePrefix": {
+    "message": "파일 이름에 threads 접두사 추가",
+    "description": "Toggle for adding threads prefix to filename"
+  },
+  "modalTitle": {
+    "message": "Threads 비디오 다운로더",
+    "description": "Modal window title"
+  },
+  "modalVersion": {
+    "message": "버전",
+    "description": "Version label in modal"
+  },
+  "modalFeatures": {
+    "message": "주요 기능",
+    "description": "Features section title"
+  },
+  "modalFeature1": {
+    "message": "미디어 일괄 다운로드",
+    "description": "Feature 1"
+  },
+  "modalFeature2": {
+    "message": "ZIP 패키징 지원",
+    "description": "Feature 2"
+  },
+  "modalFeature3": {
+    "message": "다국어 지원",
+    "description": "Feature 3"
+  },
+  "modalFeature4": {
+    "message": "개인정보 보호 친화적",
+    "description": "Feature 4"
+  },
+  "modalDisclaimer": {
+    "message": "완전히 무료로 사용할 수 있습니다. 모든 처리는 귀하의 기기에서 수행되며 서버에 데이터가 업로드되지 않습니다. 이 응용 프로그램에는 광고가 없으며 영리 목적이 아닙니다.",
+    "description": "개인정보 보호 면책"
+  },
+  "modalDeveloper": {
+    "message": "개발자",
+    "description": "Developer label"
+  },
+  "modalContact": {
+    "message": "연락처",
+    "description": "Contact label"
+  },
+  "modalGitHub": {
+    "message": "GitHub",
+    "description": "GitHub label"
+  },
+  "modalGitHubRepo": {
+    "message": "Threads-Downloader-Chrome",
+    "description": "GitHub repository name"
+  },
+  "modalGitHubStar": {
+    "message": "⭐ 별을 주세요",
+    "description": "Star request text"
+  }
+}

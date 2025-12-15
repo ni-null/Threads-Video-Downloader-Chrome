@@ -1,0 +1,23 @@
+(()=>{window.ThreadsDownloaderOverlay=window.ThreadsDownloaderOverlay||{};window.ThreadsDownloaderOverlay._processedMedia=window.ThreadsDownloaderOverlay._processedMedia||new WeakSet;window.ThreadsDownloaderOverlay._contextInvalidated=!1;window.ThreadsDownloaderOverlay._debugMode=!1;window.ThreadsDownloaderOverlay.addMediaOverlayButtons=function(){window.ThreadsDownloaderOverlay._contextInvalidated||(window.ThreadsDownloaderOverlay.processVideos(),window.ThreadsDownloaderOverlay.processImages())};window.ThreadsDownloaderOverlay.hasExistingButton=function(n,e,l){return n.querySelector(`.threads-overlay-btn[${e}='${l.replace(/'/g,"\\'")}']`)};window.ThreadsDownloaderOverlay.processVideos=function(){document.querySelectorAll("video").forEach((e,l)=>{if(window.ThreadsDownloaderOverlay._processedMedia.has(e))return;const a=window.ThreadsMediaExtractor.extractVideo(e,{maxDepth:8});if(!a)return;const o=window.ThreadsDownloaderOverlay.findMediaContainer(e);if(o){if(window.ThreadsDownloaderOverlay.hasExistingButton(o,"data-video-src",a.url)){window.ThreadsDownloaderOverlay._processedMedia.add(e);return}window.ThreadsDownloaderOverlay.createOverlayButton(o,a),window.ThreadsDownloaderOverlay._processedMedia.add(e)}})};window.ThreadsDownloaderOverlay.processImages=function(){document.querySelectorAll("picture").forEach((e,l)=>{const a=e.querySelector("img");if(!a||window.ThreadsDownloaderOverlay._processedMedia.has(a))return;const o=window.ThreadsMediaExtractor.extractImage(e);if(!o)return;const d=window.ThreadsDownloaderOverlay.findMediaContainer(e);if(d){if(window.ThreadsDownloaderOverlay.hasExistingButton(d,"data-image-src",o.url)){window.ThreadsDownloaderOverlay._processedMedia.add(a);return}window.ThreadsDownloaderOverlay.createOverlayButton(d,o),window.ThreadsDownloaderOverlay._processedMedia.add(a)}})};window.ThreadsDownloaderOverlay.findMediaContainer=function(n){return window.ThreadsMediaPositionFinder.findMediaContainer(n)};window.ThreadsDownloaderOverlay.createOverlayButton=function(n,e){const{findPostInfoFromElement:l,showPageNotification:a,i18n:o}=window.ThreadsDownloaderUtils;let d;try{d=chrome.runtime.getURL("image/download-white.svg")}catch{return window.ThreadsDownloaderOverlay._contextInvalidated=!0,window.ThreadsDownloaderScanner&&window.ThreadsDownloaderScanner._observer&&window.ThreadsDownloaderScanner._observer.disconnect(),null}const r=document.createElement("button");r.className="threads-overlay-btn",r.innerHTML=`<img src="${d}" alt="\u4E0B\u8F09" style="width: 16px; height: 16px;">`,r.title=e.type==="video"?o("downloadVideo"):o("downloadImage"),e.type==="video"?r.setAttribute("data-video-src",e.url):r.setAttribute("data-image-src",e.url),r.style.cssText=`
+    position: absolute;
+    left: 12px;
+    bottom: 12px;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    border: none;
+    background: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    color: white;
+    cursor: pointer;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
+    z-index: 9999;
+    opacity: 0;
+    pointer-events: none;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  `;let s=!1;const p=()=>{s=!0,r.style.opacity="1",r.style.pointerEvents="auto"},h=()=>{s=!1,setTimeout(()=>{s||(r.style.opacity="0",r.style.pointerEvents="none")},100)};return n.addEventListener("mouseenter",p),n.addEventListener("mouseleave",h),r.addEventListener("mouseenter",()=>{s=!0,r.style.background="rgba(0, 0, 0, 0.5)",r.style.transform="scale(1.1)"}),r.addEventListener("mouseleave",()=>{r.style.background="rgba(0, 0, 0, 0.3)",r.style.transform="scale(1)",h()}),r.addEventListener("click",c=>{c.stopPropagation(),c.preventDefault();let t=e.element,y=0;for(;t&&y<20&&!(t.querySelector&&t.querySelector('a[href*="/post/"]'));)t=t.parentElement,y++;let v=1;if(t&&e.element){const i=e.type==="video"?t.querySelectorAll("video"):t.querySelectorAll("picture img");for(let w=0;w<i.length;w++)if(i[w]===e.element){v=w+1;break}}const u=window.ThreadsFilenameGenerator.generateFilenameFromElement({element:t||e.element,type:e.type,index:v,useTimestamp:!0,addPrefix:window.ThreadsDownloaderOverlay._enableFilenamePrefix!==!1});chrome.runtime.sendMessage({action:"downloadVideo",url:e.url,filename:u},i=>{i&&i.success?a(o("downloadStarted",u)):a(o("downloadFailed",u))})}),n.appendChild(r),r};})();
